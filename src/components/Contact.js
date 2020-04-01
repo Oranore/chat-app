@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 const Contact = (props) => {
     return <div className="Contact">
-        <img className="avatar" src={props.imgAvatar} alt={props.name} />
+        <img className="avatar" src={props.avatar} alt={props.name} />
         <div>
             <div className="name">
                 {props.name}
             </div>
             <div className="status">
-                <div className={props.isOnline ? 'status-online' : 'status-offline'}>
+                <div className={props.online ? 'status-online' : 'status-offline'}>
                 </div>
-                {props.isOnline ? "Online" : "Offline"}
+                {props.online ? "Online" : "Offline"}
             </div>
         </div>
     </div>
@@ -21,8 +21,8 @@ const Contact = (props) => {
 
 Contact.propTypes ={
     name: PropTypes.string.isRequired,
-    imgAvatar: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
+    avatar: PropTypes.string.isRequired,
+    online: PropTypes.bool.isRequired,
 }
 
 
